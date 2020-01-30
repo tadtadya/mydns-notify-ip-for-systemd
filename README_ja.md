@@ -90,6 +90,27 @@ MyDNSでのDNS情報の保持期間は1週間です。1週間以上IP通知が�
 # chmod +x modify-ip.sh modify-ip-change.sh
 ```
 
+### MyDNSのログイン情報・ドメイン指定
+#### MyDNSログイン
+- mydns.service
+
+```
+[Service]
+ExecStart=/etc/mydns/notify-ip.sh user:passwor
+```
+
+シェルのパラメータにMyDNSのマスターID、パスワードを指定します。
+
+#### ドメイン
+- mydns-short.service
+
+```
+[Service]
+ExecStart=/etc/mydns/notify-ip-change.sh sample.com
+```
+
+シェルのパラメータにグローバルIPアドレスを取得するドメインを指定します。
+
 ### タイマーの登録と起動
 
 ```bash
@@ -156,9 +177,6 @@ IP変更の監視もするのでサイクルは短いです。デフォルトは
 ```
 
 それぞれに停止も可能。
-
-## 今後の課題
-- ソースを展開するシェルを作る
 
 ## 今後の課題
 - ソースを展開するシェルを作る。
