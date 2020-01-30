@@ -90,6 +90,27 @@ So this time I prepared two timers
 # chmod +x modify-ip.sh modify-ip-change.sh
 ```
 
+### Specify MyDNS login information and domain
+#### MyDNS login
+- mydns.service
+
+```
+[Service]
+ExecStart=/etc/mydns/notify-ip.sh user:passwor
+```
+
+Specify the master ID and password of MyDNS in the shell parameters.
+
+#### Domain
+- mydns-short.service
+
+```
+[Service]
+ExecStart=/etc/mydns/notify-ip-change.sh sample.com
+```
+
+Specify the domain for which you want to obtain a global IP address in the shell parameter.
+
 ### Register and start timer
 
 ```bash
