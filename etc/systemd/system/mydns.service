@@ -1,0 +1,6 @@
+[Unit]
+Description=mydns notify ip
+
+[Service]
+Type=simple
+ExecStart=/etc/mydns/notify-ip.sh user:password

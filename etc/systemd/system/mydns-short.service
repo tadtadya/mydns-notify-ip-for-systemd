@@ -1,0 +1,6 @@
+[Unit]
+Description=mydns notify ip short cycle
+
+[Service]
+Type=simple
+ExecStart=/etc/mydns/notify-ip-change.sh sample.com
