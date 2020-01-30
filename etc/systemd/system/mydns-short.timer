@@ -1,0 +1,11 @@
+[Unit]
+Description=mydns notify ip short cycle
+
+[Timer]
+OnBootSec=10s
+OnActiveSec=10s
+OnUnitActiveSec=1min
+Unit=mydns-short.service
+
+[Install]
+WantedBy=timers.target
