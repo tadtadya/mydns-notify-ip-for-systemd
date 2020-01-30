@@ -28,9 +28,7 @@ DiG 9.11.4-P2-RedHat-9.11.4-9.P2.el7
 
 ## Overview
 - MyDNSへのIP通知ログインシェルを作成してシェルを実行するSystemdのサービスを作成します。
-
 - 作成したサービスをSystemdのタイマーに登録します。
-
 - タイマーで設定したサイクルでMyDNSへIP通知ログインを行います。
 
 ## ソース構成
@@ -74,12 +72,10 @@ MyDNSでのDNS情報の保持期間は1週間です。1週間以上IP通知が�
 
 ### mydns.timer
 - タイマーが起動すると必ずIP通知を行う。
-
 - MyDNSのサービス継続用
 
 ### mydns-short.timer
 - タイマーが起動すると前回のIPアドレスと比較し、変わっているときだけIP通知を行う。
-
 - IP変更を監視して通知するショートサイクル用。
 
 ## Usage
@@ -180,10 +176,8 @@ IP変更の監視もするのでサイクルは短いです。デフォルトは
 
 ## 今後の課題
 - ソースを展開するシェルを作る。
-
 - 前回のIPアドレスとの比較のIPv6対応。
 
 ## リンク
-[MyDNS.jp](https://www.mydns.jp)
-
-[MyDNS.jp - Usage](https://www.mydns.jp/?MENU=030)
+- [MyDNS.jp](https://www.mydns.jp)
+- [MyDNS.jp - Usage](https://www.mydns.jp/?MENU=030)
