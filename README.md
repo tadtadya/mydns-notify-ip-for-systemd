@@ -28,9 +28,7 @@ DiG 9.11.4-P2-RedHat-9.11.4-9.P2.el7
 
 ## Overview
 - Create an IP notification login shell to MyDNS and create a Systemd service that runs the shell.
-
 - Register the created service in the Systemd timer.
-
 - IP notification login to MyDNS at the cycle set by the timer.
 
 ## Source configuration
@@ -74,12 +72,10 @@ So this time I prepared two timers
 
 ### mydns.timer
 - Whenever the timer starts, IP notification is performed.
-
 - For continuing MyDNS service
 
 ### mydns-short.timer
 - When the timer starts, it compares it with the previous IP address and notifies you only when it changes.
-
 - For short cycle to monitor and notify IP change
 
 ## Usage
@@ -180,10 +176,8 @@ Can be stopped individually.
 
 ## Future tasks
 - Make a shell to extract the source.
-
 - IPv6 support compared to the previous IP address.
 
 ## Links
-[MyDNS.jp](https://www.mydns.jp)
-
-[MyDNS.jp - Usage](https://www.mydns.jp/?MENU=030)
+- [MyDNS.jp](https://www.mydns.jp)
+- [MyDNS.jp - Usage](https://www.mydns.jp/?MENU=030)
