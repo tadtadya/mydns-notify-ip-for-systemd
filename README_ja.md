@@ -92,10 +92,14 @@ MyDNSでのDNS情報の保持期間は1週間です。1週間以上IP通知が�
 
 ```
 [Service]
-ExecStart=/etc/mydns/notify-ip.sh user:passwor
+ExecStart=/etc/mydns/notify-ip.sh user:password sample.com
 ```
 
-シェルのパラメータにMyDNSのマスターID、パスワードを指定します。
+| パラメータ | 内容 |
+|:---|:---|
+| user | MyDNSのマスターID |
+| password | MyDNSのパスワード |
+| `sample.com` | ドメイン |
 
 #### ドメイン
 - mydns-short.service
@@ -105,7 +109,9 @@ ExecStart=/etc/mydns/notify-ip.sh user:passwor
 ExecStart=/etc/mydns/notify-ip-change.sh sample.com
 ```
 
-シェルのパラメータにグローバルIPアドレスを取得するドメインを指定します。
+| パラメータ | 内容 |
+|:---|:---|
+| `sample.com` | ドメイン |
 
 ### タイマーの登録と起動
 

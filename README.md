@@ -92,10 +92,14 @@ So this time I prepared two timers
 
 ```
 [Service]
-ExecStart=/etc/mydns/notify-ip.sh user:passwor
+ExecStart=/etc/mydns/notify-ip.sh user:password sample.com
 ```
 
-Specify the master ID and password of MyDNS in the shell parameters.
+| parameters | content |
+|:---|:---|
+| user | MyDNS Master ID |
+| password | MyDNS Password |
+| `sample.com` | domain |
 
 #### Domain
 - mydns-short.service
@@ -105,7 +109,9 @@ Specify the master ID and password of MyDNS in the shell parameters.
 ExecStart=/etc/mydns/notify-ip-change.sh sample.com
 ```
 
-Specify the domain for which you want to obtain a global IP address in the shell parameter.
+| parameters | content |
+|:---|:---|
+| `sample.com` | domain |
 
 ### Register and start timer
 
