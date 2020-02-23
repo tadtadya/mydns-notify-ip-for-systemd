@@ -1,7 +1,7 @@
 # mydns-notify-ip-for-systemd
 DDNSサービスのMyDNSのIP通知をLinux systemdのタイマーでコントロールします。
 
-[English](https://github.com/tadtadya/mydns-notify-ip-for-systemd/blob/master/README.md)
+[English](README.md)
 
 ## 要件
 - dig - Linux command
