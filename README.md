@@ -1,7 +1,7 @@
 # mydns-notify-ip-for-systemd
 Notify IP address of MyDNS (DDNS service) with Systemd timer
 
-[Japanease](https://github.com/tadtadya/mydns-notify-ip-for-systemd/blob/master/README_ja.md)
+[Japanease](README_ja.md)
 
 ## Requirement
 - dig - Linux command
