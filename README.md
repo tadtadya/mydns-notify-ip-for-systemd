@@ -83,7 +83,7 @@ So this time I prepared two timers
 
 ```bash
 # cd /etc/mydns
-# chmod +x modify-ip.sh modify-ip-change.sh
+# chmod +x notify-ip.sh notify-ip-change.sh
 ```
 
 ### Specify MyDNS login information and domain

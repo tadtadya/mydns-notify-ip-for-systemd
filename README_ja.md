@@ -83,7 +83,7 @@ MyDNSでのDNS情報の保持期間は1週間です。1週間以上IP通知が�
 
 ```bash
 # cd /etc/mydns
-# chmod +x modify-ip.sh modify-ip-change.sh
+# chmod +x notify-ip.sh notify-ip-change.sh
 ```
 
 ### MyDNSのログイン情報・ドメイン指定
