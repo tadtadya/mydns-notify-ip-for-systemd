@@ -83,7 +83,7 @@ MyDNSでのDNS情報の保持期間は1週間です。1週間以上IP通知が�
 
 ```bash
 # cd /etc/mydns
-# chmod +x modify-ip.sh modify-ip-change.sh
+# chmod +x notify-ip.sh notify-ip-change.sh
 ```
 
 ### MyDNSのログイン情報・ドメイン指定
@@ -92,25 +92,26 @@ MyDNSでのDNS情報の保持期間は1週間です。1週間以上IP通知が�
 
 ```
 [Service]
-ExecStart=/etc/mydns/notify-ip.sh user:password sample.com
+ExecStart=/etc/mydns/notify-ip.sh user:password
 ```
 
 | パラメータ | 内容 |
 |:---|:---|
 | user | MyDNSのマスターID |
 | password | MyDNSのパスワード |
-| `sample.com` | ドメイン |
 
 #### ドメイン
 - mydns-short.service
 
 ```
 [Service]
-ExecStart=/etc/mydns/notify-ip-change.sh sample.com
+ExecStart=/etc/mydns/notify-ip-change.sh user:password sample.com
 ```
 
 | パラメータ | 内容 |
 |:---|:---|
+| user | MyDNSのマスターID |
+| password | MyDNSのパスワード |
 | `sample.com` | ドメイン |
 
 ### タイマーの登録と起動
