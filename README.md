@@ -83,7 +83,7 @@ So this time I prepared two timers
 
 ```bash
 # cd /etc/mydns
-# chmod +x modify-ip.sh modify-ip-change.sh
+# chmod +x notify-ip.sh notify-ip-change.sh
 ```
 
 ### Specify MyDNS login information and domain
@@ -92,25 +92,26 @@ So this time I prepared two timers
 
 ```
 [Service]
-ExecStart=/etc/mydns/notify-ip.sh user:password sample.com
+ExecStart=/etc/mydns/notify-ip.sh user:password
 ```
 
 | parameters | content |
 |:---|:---|
 | user | MyDNS Master ID |
 | password | MyDNS Password |
-| `sample.com` | domain |
 
 #### Domain
 - mydns-short.service
 
 ```
 [Service]
-ExecStart=/etc/mydns/notify-ip-change.sh sample.com
+ExecStart=/etc/mydns/notify-ip-change.sh user:password sample.com
 ```
 
 | parameters | content |
 |:---|:---|
+| user | MyDNS Master ID |
+| password | MyDNS Password |
 | `sample.com` | domain |
 
 ### Register and start timer
